@@ -71,4 +71,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Adrian Stefan - LinkedIn
 GitHub - Stefan-Code-JS
 👨‍💻 Developer Notes
+<<<<<<< HEAD
 This project was inspired by the need to efficiently track time and manage tasks in both personal and professional settings. Whether you’re a developer, student, or entrepreneur, Quantana is designed to simplify your time management process and help you achieve more.
+=======
+This project was inspired by the need to efficiently track time and manage tasks in both personal and professional settings. Whether you’re a developer, student, or entrepreneur, Quantana is designed to simplify your time management process and help you achieve more.
+>>>>>>> cf8f55e79195ccd10c58e025e3ffef5f118ea6b8
