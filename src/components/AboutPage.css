@@ -1,0 +1,150 @@
+.about-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../download_resized_4k.jpg') no-repeat center center/cover;
+  z-index: -1;
+}
+
+
+.glass-container {
+  display: flex;
+  flex-direction: column; /* Ensure items are stacked vertically */
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.about-content {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px; /* Add margin to separate from footer */
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: none;
+  color: transparent;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Glowing effect for key words */
+.glow {
+  color: #fff;
+  text-shadow: 0 0 8px #ff9c00, 0 0 20px #ff9c00, 0 0 30px #ff9c00;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+/* Glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #ff9c00, 0 0 20px #ff9c00, 0 0 30px #ff9c00;
+  }
+  to {
+    text-shadow: 0 0 20px #ff4e00, 0 0 30px #ff4e00, 0 0 40px #ff4e00;
+  }
+}
+.gif-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px; /* Ensure space between GIFs and footer */
+
+}
+
+.about-gif {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  margin-top: 10px; /* Add space between content and footer */
+  width: 100%;
+}
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .glass-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+  
+  .about-gif {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-container {
+    width: 95%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .gif-container {
+    flex-direction: column; /* Stack GIFs vertically on smaller screens */
+  }
+
+  .about-gif {
+    width: 150px;
+    margin-bottom: 20px; /* Add space between stacked GIFs */
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .about-gif {
+    width: 120px;
+  }
+}

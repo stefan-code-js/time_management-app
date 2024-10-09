@@ -1,0 +1,101 @@
+.glass-button {
+    width: 200px; /* Smaller width */
+    height: 60px; /* Smaller height */
+    font-size: 16px; /* Smaller font */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px; /* Matches height for centering text */
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    background-image: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+    background-size: 600%;
+    animation: gradientMove 16s linear infinite;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+    background-position: right center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* Adding glow effect */
+.glass-button::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: blur(30px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glass-button:hover::before {
+    opacity: 1;
+}
+
+.glass-button:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.glass-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .glass-button {
+        width: 150px; /* Shrink further on smaller screens */
+        height: 50px; /* Shrink further on smaller screens */
+        font-size: 14px; /* Smaller font size for small screens */
+        line-height: 50px; /* Adjust to match the height */
+    }
+
+    .glass-button::before {
+        width: 120px; /* Adjust glow size on smaller screens */
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .glass-button {
+        width: 130px; /* Further shrink for very small screens */
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .glass-button::before {
+        width: 100px;
+        height: 100px;
+    }
+}

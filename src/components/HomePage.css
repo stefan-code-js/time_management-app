@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wdth,wght@112.5,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #000000;
+  backdrop-filter: blur(40%);  
+  backdrop-filter: opacity(20%); 
+  overflow: hidden;
+  position: relative;
+  background: url('../mainPage.gif') no-repeat center center/cover;
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+/* Header Styling */
+.App-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensures text appears above the background */
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+.top-text {
+  font-family:  "Noto Sans Mono", monospace;
+  font-size: 1.5rem;
+  color:#FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+.title {
+  font-family: "BioRhyme", system-ui;;
+  font-size: 10rem;
+  color:#FFFFFF;
+  margin-bottom: 10px;
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+.sub-title {
+  font-family:  "Noto Sans Mono", monospace;
+  font-size: 1.5rem;
+  color:#E0E0E0;
+  margin-bottom: 30px; /* Add space between subtitle and button */
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+.footer-text {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
+}
+
+/* Button centering */
+.glass-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Spacing between button and subtitle */
+}
+
+/* Responsive Text Scaling */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+  }
+
+  .top-text {
+    font-size: 1.2rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+

@@ -1,0 +1,130 @@
+/* Glassmorphic Navbar */
+.glass-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Navbar link text styling */
+.navbar-links a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Search Box */
+.navbar-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: width 0.4s ease, opacity 0.4s ease; /* Animate the search bar */
+}
+
+.search-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* Show the search bar on toggle */
+.navbar-search.active .search-input {
+  visibility: visible;
+  opacity: 1;
+  width: 150px;
+}
+
+/* Profile Icon */
+.navbar-profile img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hamburger Menu */
+.navbar-hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-links.active {
+    display: block;
+  }
+
+  .navbar-search {
+    margin-right: 0;
+  }
+
+  .navbar-search .search-input {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}

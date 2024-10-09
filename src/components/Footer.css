@@ -1,0 +1,35 @@
+.footer {
+  padding: 2px 0;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  width: 10%;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: rgb(193, 255, 8);;
+  font-size: 20px;
+  padding: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: all 0.5s ease;
+}
+
+.footer a:hover {
+  color: rgb(193, 255, 8);
+  z-index: 9;
+  transform: scale(1.1) rotate(42deg); /* Combined transformations */
+}
+
+.footer p {
+  color:rgb(193, 255, 8);;
+  font-size: 20px;
+}
+
+.footer p:hover {
+  color: rgb(178, 199, 20);
+  z-index: 2;
+  transform: scale(0.9);
+}
