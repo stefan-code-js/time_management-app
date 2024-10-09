@@ -1,9 +1,20 @@
-/* Glassmorphic Navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styles */
 .glass-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 20px;
+  left: 20px;
+  right: 20px;
   padding: 15px 30px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
@@ -13,23 +24,24 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Logo */
 .navbar-logo a {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Navbar Links */
 .navbar-links {
-  display: flex;
+  display: flex;  /* Make sure links are flex for large screens */
   list-style: none;
   gap: 30px;
   justify-content: center;
   align-items: center;
+  z-index: 100; /* Ensure it’s visible */
 }
 
 .navbar-links.active {
@@ -43,14 +55,41 @@
   border-radius: 10px;
 }
 
-/* Navbar link text styling */
 .navbar-links a {
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
   text-decoration: none;
   padding: 10px;
   transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #ff8a00;
+}
+
+/* For mobile screens */
+.navbar-hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.hamburger-icon {
+  font-size: 1.8rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Search Box */
@@ -59,7 +98,6 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
-  transition: width 0.4s ease, opacity 0.4s ease; /* Animate the search bar */
 }
 
 .search-icon {
@@ -70,52 +108,42 @@
 
 .search-input {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 8px 20px;
   color: white;
   font-size: 14px;
-  transition: all 0.3s ease;
   width: 0;
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease;
 }
 
-/* Show the search bar on toggle */
 .navbar-search.active .search-input {
   visibility: visible;
   opacity: 1;
   width: 150px;
 }
 
-/* Profile Icon */
 .navbar-profile img {
   width: 40px;
   height: 40px;
-}
-
-/* Hamburger Menu */
-.navbar-hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: white;
+  border-radius: 50%;
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar-links {
-    display: none;
+    display: none;  /* Hide links by default on mobile */
   }
 
   .navbar-hamburger {
-    display: block;
+    display: block;  /* Show hamburger icon on mobile */
   }
 
   .navbar-links.active {
     display: block;
+    height: auto;
   }
 
   .navbar-search {

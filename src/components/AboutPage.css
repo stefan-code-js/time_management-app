@@ -1,3 +1,4 @@
+/* About Page Styles */
 .about-page {
   position: relative;
   height: 100vh;
@@ -13,35 +14,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../download_resized_4k.jpg') no-repeat center center/cover;
   z-index: -1;
 }
 
-
 .glass-container {
+  margin-top:50px;
   display: flex;
-  flex-direction: column; /* Ensure items are stacked vertically */
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   max-width: 1200px;
   padding: 40px;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 .about-content {
   text-align: center;
   color: #fff;
-  margin-bottom: 10px; /* Add margin to separate from footer */
+  margin-bottom: 10px;
 }
-
+body, html {
+  background-color: #121212; /* Dark background color */
+  color: white; /* Text should be white on dark background */
+  height: 100%;
+}
 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background: linear-gradient(90deg, #bdbdbd, #f7ebeb);
   -webkit-background-clip: text;
   background-clip: none;
   color: transparent;
@@ -54,40 +59,46 @@ p {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Glowing effect for key words */
 .glow {
   color: #fff;
-  text-shadow: 0 0 8px #ff9c00, 0 0 20px #ff9c00, 0 0 30px #ff9c00;
+  text-shadow: 0 0 8px #fff9ef, 0 0 20px #ffffff, 0 0 30px #ffffff;
   animation: glow 1.5s ease-in-out infinite alternate;
 }
-/* Glow animation */
+
 @keyframes glow {
   from {
-    text-shadow: 0 0 8px #ff9c00, 0 0 20px #ff9c00, 0 0 30px #ff9c00;
+    text-shadow: 0 0 8px #e9e7e5, 0 0 20px #ffffff, 0 0 30px #ffffff;
   }
   to {
-    text-shadow: 0 0 20px #ff4e00, 0 0 30px #ff4e00, 0 0 40px #ff4e00;
+    text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
   }
 }
+
 .gif-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px; /* Ensure space between GIFs and footer */
-
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
 }
 
 .about-gif {
-  width: 200px;
+  width: 300px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
+
+.about-gif:hover {
+  transform: scale(1.05);
+}
+
 .footer {
-  margin-top: 10px; /* Add space between content and footer */
+  margin-top: 10px;
   width: 100%;
 }
-/* Responsive styles */
+
+/* Responsive Styles */
 @media (max-width: 1200px) {
   .glass-container {
     width: 90%;
@@ -101,7 +112,7 @@ p {
   p {
     font-size: 1.1rem;
   }
-  
+
   .about-gif {
     width: 180px;
   }
@@ -122,12 +133,12 @@ p {
   }
 
   .gif-container {
-    flex-direction: column; /* Stack GIFs vertically on smaller screens */
+    flex-direction: column;
   }
 
   .about-gif {
     width: 150px;
-    margin-bottom: 20px; /* Add space between stacked GIFs */
+    margin-bottom: 20px;
   }
 }
 

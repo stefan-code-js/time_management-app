@@ -1,0 +1,5 @@
+body, html {
+    background-color: #121212; /* Dark background color */
+    color: white; /* Text should be white on dark background */
+    height: 100%;
+  }

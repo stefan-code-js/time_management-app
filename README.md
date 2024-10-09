@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+⏰ Quantana Time Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Quantana Time Management is your all-in-one solution to boost productivity, optimize your workflow, and take control of your time. Designed with an intuitive and visually appealing interface, Quantana empowers you to manage your tasks, routines, and habits with ease, making every second count!
 
-## Available Scripts
+🌟 Features
+Task Management: Create, edit, and prioritize tasks effortlessly.
+Daily & Weekly Views: Visualize your schedule with daily and weekly overviews.
+Time Blocking: Schedule time blocks for focused work and important tasks.
+Habit Tracker: Build and track new habits to enhance productivity.
+Progress Visualization: View your progress through beautiful charts and graphs.
+Sync with Other Apps: Integrate with Google Calendar and other time-tracking apps.
+Notifications & Reminders: Never miss a task or habit with smart notifications.
+Dark Mode: A sleek dark theme for working in low-light environments.
+🚀 Getting Started
+Follow these instructions to get Quantana Time Management running on your local machine for development and testing purposes.
 
-In the project directory, you can run:
+Prerequisites
+You’ll need the following tools installed on your machine:
 
-### `npm start`
+Node.js: Install Node.js (v14.x or higher)
+Git: Install Git
+React: Quantana is built with React, so basic knowledge of React is recommended.
+Installation
+Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+git clone https://github.com/stefan-code-js/time_management-app.git
+cd time_management-app
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm install
+Start the development server:
 
-### `npm test`
+bash
+Copy code
+npm start
+The app should now be running on http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Built With
+React - A JavaScript library for building user interfaces.
+Node.js - Server environment for JavaScript.
+Chart.js - For rendering beautiful charts.
+Font Awesome - Icon library for the UI.
+Sass - CSS preprocessor for cleaner styling.
+📚 Usage
+Create Tasks: Add tasks with deadlines and priority levels.
+Track Your Habits: Set and track your habits (e.g., coding, working out).
+Visualize Your Progress: Use the built-in charts to see how you’re improving.
+Time Block: Organize your workday with dedicated time blocks for deep work.
+Sync: Sync with external calendars to streamline your entire schedule.
+📸 Screenshots
+Fully responsive, intuitive interface for seamless time management.
 
-### `npm run build`
+Manage your tasks and time blocks efficiently.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🛠️ Contributing
+We welcome contributions to Quantana Time Management! To contribute:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Fork the repository.
+Create a new branch (git checkout -b feature/AmazingFeature).
+Commit your changes (git commit -m 'Add some AmazingFeature').
+Push to the branch (git push origin feature/AmazingFeature).
+Open a Pull Request.
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📬 Contact
+Adrian Stefan - LinkedIn
+GitHub - Stefan-Code-JS
+👨‍💻 Developer Notes
+This project was inspired by the need to efficiently track time and manage tasks in both personal and professional settings. Whether you’re a developer, student, or entrepreneur, Quantana is designed to simplify your time management process and help you achieve more.
